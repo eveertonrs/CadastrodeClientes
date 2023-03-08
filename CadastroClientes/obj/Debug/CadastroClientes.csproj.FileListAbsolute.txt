@@ -1,0 +1,13 @@
+C:\Projetos\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.exe.config
+C:\Projetos\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.exe
+C:\Projetos\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.pdb
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.csproj.AssemblyReference.cache
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.csproj.SuggestedBindingRedirects.cache
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.Form1.resources
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.FrmCadCliente.resources
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.Properties.Resources.resources
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.csproj.GenerateResource.cache
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.csproj.CoreCompileInputs.cache
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.exe
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.pdb
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.FrmConsulta.resources
