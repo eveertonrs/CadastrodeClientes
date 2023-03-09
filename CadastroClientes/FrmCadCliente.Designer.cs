@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtData = new System.Windows.Forms.MaskedTextBox();
             this.txtEnd = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
@@ -41,20 +43,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.errorNome = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorData = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorTelefone = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorEnd = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTelefone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEnd)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // LblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Clientes";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.LblTitulo.AutoSize = true;
+            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Location = new System.Drawing.Point(7, 23);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Size = new System.Drawing.Size(258, 29);
+            this.LblTitulo.TabIndex = 0;
+            this.LblTitulo.Text = "Cadastro de Clientes";
+            this.LblTitulo.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
@@ -76,6 +87,17 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(139, 230);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(108, 40);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Salvar Alteração";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // txtData
             // 
             this.txtData.Location = new System.Drawing.Point(139, 77);
@@ -84,6 +106,7 @@
             this.txtData.Size = new System.Drawing.Size(85, 20);
             this.txtData.TabIndex = 12;
             this.txtData.ValidatingType = typeof(System.DateTime);
+            this.txtData.TextChanged += new System.EventHandler(this.txtData_TextChanged);
             // 
             // txtEnd
             // 
@@ -91,6 +114,7 @@
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(373, 20);
             this.txtEnd.TabIndex = 10;
+            this.txtEnd.TextChanged += new System.EventHandler(this.txtEnd_TextChanged);
             // 
             // txtTelefone
             // 
@@ -98,6 +122,7 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(298, 20);
             this.txtTelefone.TabIndex = 9;
+            this.txtTelefone.TextChanged += new System.EventHandler(this.txtTelefone_TextChanged);
             // 
             // txtEmail
             // 
@@ -105,6 +130,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(298, 20);
             this.txtEmail.TabIndex = 8;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtNome
             // 
@@ -112,6 +138,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(373, 20);
             this.txtNome.TabIndex = 6;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // button1
             // 
@@ -135,11 +162,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 149);
+            this.label5.Location = new System.Drawing.Point(41, 152);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Telefone";
+            this.label5.Text = "Telefone / Celular";
             // 
             // label4
             // 
@@ -168,37 +195,51 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome";
             // 
-            // button2
+            // errorNome
             // 
-            this.button2.Location = new System.Drawing.Point(139, 230);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 40);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Salvar Alteração";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.errorNome.ContainerControl = this;
+            // 
+            // errorData
+            // 
+            this.errorData.ContainerControl = this;
+            // 
+            // errorEmail
+            // 
+            this.errorEmail.ContainerControl = this;
+            // 
+            // errorTelefone
+            // 
+            this.errorTelefone.ContainerControl = this;
+            // 
+            // errorEnd
+            // 
+            this.errorEnd.ContainerControl = this;
             // 
             // FrmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Controls.Add(this.LblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmCadCliente";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTelefone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEnd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -212,5 +253,11 @@
         public System.Windows.Forms.TextBox txtNome;
         public System.Windows.Forms.MaskedTextBox txtData;
         public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Label LblTitulo;
+        private System.Windows.Forms.ErrorProvider errorNome;
+        private System.Windows.Forms.ErrorProvider errorData;
+        private System.Windows.Forms.ErrorProvider errorEmail;
+        private System.Windows.Forms.ErrorProvider errorTelefone;
+        private System.Windows.Forms.ErrorProvider errorEnd;
     }
 }

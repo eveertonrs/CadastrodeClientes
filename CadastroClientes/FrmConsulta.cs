@@ -24,7 +24,7 @@ namespace CadastroClientes
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        public void button1_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -32,9 +32,9 @@ namespace CadastroClientes
                 OleDbConnection conn = new OleDbConnection(StringCon);
                 conn.Open();
 
-                string SQL = "SELECT * FROM clientes";
+                string SQLrefresh = "SELECT * FROM clientes";
 
-                OleDbDataAdapter adapter = new OleDbDataAdapter(SQL,conn);
+                OleDbDataAdapter adapter = new OleDbDataAdapter(SQLrefresh, conn);
 
                 DataSet DS = new DataSet();
 
@@ -49,9 +49,16 @@ namespace CadastroClientes
             }
         }
 
-        private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
+        public void alterarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCadCliente frm = new FrmCadCliente();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            frm.Text = "";
+
+            frm.LblTitulo.Text = "Alterar cadastro";
+
+
             frm.Codigo = DgResultado.SelectedCells[0].Value.ToString();
             frm.txtNome.Text = DgResultado.SelectedCells[1].Value.ToString();
             frm.txtTelefone.Text = DgResultado.SelectedCells[3].Value.ToString();
@@ -61,6 +68,35 @@ namespace CadastroClientes
             frm.button1.Visible = false;
             frm.button2.Visible = true;
             frm.ShowDialog();
+           
+            
+            
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String StringCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\evert\OneDrive\Documentos\base.mdb";
+                OleDbConnection conn = new OleDbConnection(StringCon);
+                conn.Open();
+
+                string cod = DgResultado.SelectedCells[0].Value.ToString();
+                string SQL = "DELETE FROM clientes WHERE codigo =" + cod;
+
+                OleDbCommand cmd = new OleDbCommand(SQL,conn);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Dados deletados com sucesso");
+
+                button1_Click_1(sender, e);
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+            }
         }
     }
 }

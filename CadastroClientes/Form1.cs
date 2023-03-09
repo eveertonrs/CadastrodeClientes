@@ -24,6 +24,12 @@ namespace CadastroClientes
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(this.ActiveMdiChild != null)
+            {
+
+                this.ActiveMdiChild.Close();
+
+            }
             FrmCadCliente frm = new FrmCadCliente();
             frm.MdiParent = this;
 
@@ -37,6 +43,12 @@ namespace CadastroClientes
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+            {
+
+                this.ActiveMdiChild.Close();
+
+            }
             FrmConsulta frm = new FrmConsulta();
             frm.MdiParent = this;
 
