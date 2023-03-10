@@ -33,9 +33,11 @@
             this.DgResultado = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgResultado)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -74,9 +76,16 @@
             // alterarToolStripMenuItem
             // 
             this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
-            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.alterarToolStripMenuItem.Text = "Alterar";
             this.alterarToolStripMenuItem.Click += new System.EventHandler(this.alterarToolStripMenuItem_Click);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // btnConsultar
             // 
@@ -98,12 +107,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Consultar Clientes";
             // 
-            // excluirToolStripMenuItem
+            // txtBuscar
             // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.excluirToolStripMenuItem.Text = "Excluir";
-            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
+            this.txtBuscar.Location = new System.Drawing.Point(493, 19);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(178, 20);
+            this.txtBuscar.TabIndex = 3;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(680, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(102, 20);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmConsulta
             // 
@@ -111,6 +130,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.groupBox1);
@@ -135,5 +156,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

@@ -65,12 +65,13 @@ namespace CadastroClientes
             frm.txtEmail.Text = DgResultado.SelectedCells[2].Value.ToString();
             frm.txtEnd.Text = DgResultado.SelectedCells[4].Value.ToString();
             frm.txtData.Text = DgResultado.SelectedCells[5].Value.ToString();
-            frm.button1.Visible = false;
-            frm.button2.Visible = true;
+            frm.btnCadastrar.Visible = false;
+            frm.BtnSalvar.Visible = true;
             frm.ShowDialog();
-           
-            
-            
+            button1_Click_1(sender, e);
+
+
+
         }
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,6 +98,52 @@ namespace CadastroClientes
 
                 MessageBox.Show(erro.Message);
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BuscarProduto();
+        }
+        private void BuscarProduto()
+        {
+            try
+            {
+                String StringCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\evert\OneDrive\Documentos\base.mdb";
+                OleDbConnection conn = new OleDbConnection(StringCon);
+                conn.Open();
+
+                string SQLBuscar;
+
+                SQLBuscar = "SELECT * FROM clientes ";
+                SQLBuscar += "WHERE Nome LIKE '" + txtBuscar.Text + "%'";
+
+
+                OleDbCommand cmd = new OleDbCommand(SQLBuscar, conn);
+
+                cmd.ExecuteNonQuery();
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter(SQLBuscar, conn);
+
+
+                OleDbDataReader leitor = cmd.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                dataTable.Load(leitor);
+                DgResultado.DataSource = dataTable;
+
+
+                txtBuscar.Clear();
+
+                conn.Close();
+
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+            }
+
+
         }
     }
 }

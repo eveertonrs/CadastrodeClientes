@@ -11,3 +11,7 @@ C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.csproj.
 C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.exe
 C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.pdb
 C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.FrmConsulta.resources
+C:\Projetos\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.exe.manifest
+C:\Projetos\CadastroClientes\CadastroClientes\bin\Debug\CadastroClientes.application
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.exe.manifest
+C:\Projetos\CadastroClientes\CadastroClientes\obj\Debug\CadastroClientes.application

@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
             this.txtData = new System.Windows.Forms.MaskedTextBox();
             this.txtEnd = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,13 +69,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.BtnSalvar);
             this.groupBox1.Controls.Add(this.txtData);
             this.groupBox1.Controls.Add(this.txtEnd);
             this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.txtNome);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -87,16 +87,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // button2
+            // BtnSalvar
             // 
-            this.button2.Location = new System.Drawing.Point(139, 230);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 40);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Salvar Alteração";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnSalvar.Location = new System.Drawing.Point(139, 230);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(108, 40);
+            this.BtnSalvar.TabIndex = 13;
+            this.BtnSalvar.Text = "Salvar Alteração";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Visible = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtData
             // 
@@ -140,15 +140,15 @@
             this.txtNome.TabIndex = 6;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(404, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastrar.Location = new System.Drawing.Point(404, 230);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(108, 40);
+            this.btnCadastrar.TabIndex = 5;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -246,13 +246,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnCadastrar;
         public System.Windows.Forms.TextBox txtEnd;
         public System.Windows.Forms.TextBox txtTelefone;
         public System.Windows.Forms.TextBox txtEmail;
         public System.Windows.Forms.TextBox txtNome;
         public System.Windows.Forms.MaskedTextBox txtData;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button BtnSalvar;
         public System.Windows.Forms.Label LblTitulo;
         private System.Windows.Forms.ErrorProvider errorNome;
         private System.Windows.Forms.ErrorProvider errorData;

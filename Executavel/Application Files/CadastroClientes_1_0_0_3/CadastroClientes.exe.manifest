@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="CadastroClientes.exe" version="1.0.0.3" publicKeyToken="c483b9954ab26aeb" language="neutral" processorArchitecture="amd64" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="CadastroClientes" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+    <commandLine file="CadastroClientes.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opções de Manifesto do UAC
+          Para alterar o nível de Controle de Conta de Usuário do Windows, substitua o nó
+          requestedExecutionLevel por um dos seguintes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Para utilizar a Virtualização de Arquivos e Registro para manter a compatibilidade com versões anteriores,
+         exclua o nó requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CadastroClientes.exe" size="22496">
+      <assemblyIdentity name="CadastroClientes" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>XVWitLhqHvzjTWxCglk1wWku/oC+qH9bSG6iK38ECWE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="CadastroClientes.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+CM46OnHRrXZXNLMx7+U3V3iubiYL//d8hGOR13lDhU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-V2L11PA\evert" issuerKeyHash="0c198d5d38198ae07a6d118d978d99983f579c4e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Ug4VF6MimxEGzl9UjeOZ9L4gpx/zTZ4rIGycc322cnE=</DigestValue></Reference></SignedInfo><SignatureValue>E7ZUalmB4xC7OJfN23eSMbjo2nMQQH7s0nLTAECV9IIlraXrGEtjWC9GydllhWu53X5S4vcUibvgb9tfsCytYAAWchKCE8uJ8pU8AWm7KBeqSOQAo97wvSo57CMai459cQ0Wr5mLspJz9YkbjnedTHDHl5f4B8/Syk1p61lmCH0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xsbk7NXdMHXfdc3CdF0nhDKpbqD+cLZVFe+j7PVBu9JUc4ypKHFzBQc4ubPut7kmgO/n1aM2jMkez2GZ9aAjy0mrvJrwVxC1bvzWxR8wNClj9Zljf5Typ8KjOlhn9YMHCxo8bbNPO5haRUX8iCRIMacAj1rVRrkZacs2MO8C3ok=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7172b67d739c6c202b9e4df31fa720bef499e38d545fce06119b22a317150e52" Description="" Url=""><as:assemblyIdentity name="CadastroClientes.exe" version="1.0.0.3" publicKeyToken="c483b9954ab26aeb" language="neutral" processorArchitecture="amd64" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-V2L11PA\evert</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7H2WE1LWfEb1B/11Ic/mKSJYkomgrCHISjNR4TonWtk=</DigestValue></Reference></SignedInfo><SignatureValue>Gd24pLhx0jGbQyTM0iEep1iIkzM2/kFzRWGlEuHG+nTq5P1sxjvE6+vQfv4g/seJVkXhuKEtVyFpENvmXRc2hvnROUrBC797H5YSH3/NXRjOVrW9jtJDgSMFHFck2B4rRyZbfssDiF3br6iEToaJKE8p7UFgyND5oxDpX5OwJ+U=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xsbk7NXdMHXfdc3CdF0nhDKpbqD+cLZVFe+j7PVBu9JUc4ypKHFzBQc4ubPut7kmgO/n1aM2jMkez2GZ9aAjy0mrvJrwVxC1bvzWxR8wNClj9Zljf5Typ8KjOlhn9YMHCxo8bbNPO5haRUX8iCRIMacAj1rVRrkZacs2MO8C3ok=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQbqAeoFEUipdP5m3KzIwAMjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFYAMgBMADEAMQBQAEEAXABlAHYAZQByAHQwHhcNMjMwMzEwMTUxMTE4WhcNMjQwMzA5MjExMTE4WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFYAMgBMADEAMQBQAEEAXABlAHYAZQByAHQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMbG5OzV3TB133XNwnRdJ4QyqW6g/nC2VRXvo+z1QbvSVHOMqShxcwUHOLmz7re5JoDv59WjNozJHs9hmfWgI8tJq7ya8FcQtW781sUfMDQpY/WZY3+U8qfCozpYZ/WDBwsaPG2zTzuYWkVF/IgkSDGnAI9a1Ua5GWnLNjDvAt6JAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAhbSYt4LbcbE9WHpK5Nx2QNrwwqHLUVAHp1rsxwvFQ54Rm8znGVr39QeNsodXQtsrfriq6jDDV0Mnox794CkT68Y1CKiHqga+yJDHuGfbucP+/svSVaWSJeu0HGijSEmIxArCdj/tQI9x0ZbQBGHhNOTZs1vs1HRqYUEB+4KrHYs=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

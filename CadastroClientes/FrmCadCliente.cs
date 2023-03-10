@@ -20,7 +20,7 @@ namespace CadastroClientes
         
         private bool ValidaNome()
         {
-            return (txtNome.TextLength >= 15);
+            return (txtNome.TextLength >= 7);
         }
         private bool ValidaEmail()
         {
@@ -28,7 +28,7 @@ namespace CadastroClientes
         }
         private bool ValidaEnd()
         {
-            return (txtEnd.TextLength >= 25);
+            return (txtEnd.TextLength >= 10);
         }
         private bool ValidaTelefone()
         {
@@ -56,21 +56,23 @@ namespace CadastroClientes
                 conn.Open();
 
 
-                string SQL;
-                SQL = "INSERT INTO clientes(Nome,Email,Telefone,Endereco,DataNasc) VALUES ";
-                SQL +="('"+txtNome.Text+"', '"+txtEmail.Text+"', '"+txtTelefone.Text +"', '"+txtEnd.Text +"', '"+txtData.Text +"')";
-                OleDbCommand cmd = new OleDbCommand(SQL,conn);
 
-                cmd.ExecuteNonQuery();
-                if (ValidaEmail() && ValidaEnd() && ValidaNome() && ValidaTelefone())
+                if (ValidaNome() && ValidaTelefone() && ValidaEnd())
                 {
+                    string SQL;
+                    SQL = "INSERT INTO clientes(Nome,Email,Telefone,Endereco,DataNasc) VALUES ";
+                    SQL += "('" + txtNome.Text + "', '" + txtEmail.Text + "', '" + txtTelefone.Text + "', '" + txtEnd.Text + "', '" + txtData.Text + "')";
+                    OleDbCommand cmd = new OleDbCommand(SQL, conn);
+                    cmd.ExecuteNonQuery();
+
                     MessageBox.Show("Cliente cadastrados com sucesso");
                     txtData.Clear();
                     txtEmail.Clear();
                     txtEnd.Clear();
                     txtNome.Clear();
                     txtTelefone.Clear();
-                   
+                    Close();
+
                 }
                 else
                 {
@@ -79,6 +81,7 @@ namespace CadastroClientes
                 
 
                 conn.Close();
+                
             }
             catch (Exception erro)
             {
@@ -111,22 +114,27 @@ namespace CadastroClientes
                 SQL += " WHERE Codigo = " + Codigo;
 
 
+
                 OleDbCommand cmd = new OleDbCommand(SQL, conn);
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Dados do cliente alterado com sucesso");
-                
-                
 
+                MessageBox.Show("Dados do cliente alterado com sucesso");
+            
                 txtData.Clear();
                 txtEmail.Clear();
                 txtEnd.Clear();
                 txtNome.Clear();
                 txtTelefone.Clear();
 
+
                 conn.Close();
-                
+
+
+                Close();
+
+
             }
             catch (Exception erro)
             {
